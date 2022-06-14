@@ -24,21 +24,27 @@ public class MyRobot {
         //   WebElement NameWhatsApp = elementList.get(0);
         // WebElement userINput = driver.findElement(By.className("_13NKt copyable-text selectable-text"));
         // userINput.sendKeys("משה וינרב");
-        Thread t = new Thread(() -> {
-            while (true) {
-                boolean y = driver.getPageSource().contains("תיבת טקסט להזנת החיפוש");
-                if (y) {
-                    Window window = new Window();
-                    JLabel label = new JLabel("התחברות בוצעה בהצלחה");
-                    label.setBounds(10, 10, 100, 100);
-                    label.add(window);
 
-                    break;
-                }
 
+        while (true) {
+
+            if (driver.getPageSource().contains("תיבת טקסט להזנת החיפוש")) {
+                System.out.println("sos");
+                JFrame frame = new JFrame();
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                frame.setLocationRelativeTo(null);
+                frame.setVisible(true);
+                frame.setLayout(null);
+                frame.setResizable(false);
+                frame.setBounds(0, 0, 500, 500);
+                JLabel label = new JLabel("Ssssssiudhbewijdn");
+                label.setBounds(10, 10, 100, 100);
+                frame.add(label);
+
+                break;
             }
-        });
-        t.start();
+
+        }
 
 
     }
