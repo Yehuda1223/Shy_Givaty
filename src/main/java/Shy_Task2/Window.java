@@ -2,12 +2,12 @@ package Shy_Task2;
 
 import javax.swing.*;
 
-import static Shy_Task2.MyRobt.Whatsapp;
+import static Shy_Task2.MyRbot2.Whatsapp;
 
 public class Window extends JFrame {
+
     public static final int WINDOW_HIGHT = 500;
     public static final int WINDOW_WITGH = 500;
-    int c;
 
     public static void main(String[] args) throws InterruptedException {
         Window();
