@@ -2,7 +2,7 @@ package Shy_Task2;
 
 import javax.swing.*;
 
-import static Shy_Task2.MyRbot2.Whatsapp;
+import static Shy_Task2.MyRobot.Whatsapp;
 
 public class Window extends JFrame {
 
