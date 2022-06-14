@@ -27,7 +27,7 @@ public class MyRobt  {
            userINput.sendKeys("משה וינרב");
            Thread t = new Thread(()->{
                while (true){
-                                boolean b = driver.getPageSource().contains("Open WhatsApp on your phone");
+                   boolean b = driver.getPageSource().contains("Open WhatsApp on your phone");
                    if(!b){
                       new Window();
                        break;
