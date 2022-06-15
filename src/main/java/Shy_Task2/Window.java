@@ -2,13 +2,13 @@ package Shy_Task2;
 
 import javax.swing.*;
 
-import static Shy_Task2.MyRobot.Whatsapp;
+import static Shy_Task2.MyRobot.OpenWhatsapp;
 
 public class Window extends JFrame {
 
     public static final int WINDOW_HIGHT = 500;
     public static final int WINDOW_WITGH = 500;
-
+    protected boolean Test;
     public static void main(String[] args) throws InterruptedException {
         Window();
 
@@ -27,16 +27,18 @@ public class Window extends JFrame {
         JButton button = new JButton("click here");
         button.setBounds(200, 200, 100, 100);
         frame.add(button);
+
         button.addActionListener((event) -> {
 
             try {
-                Whatsapp();
+                OpenWhatsapp();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
 
         });
+
 
     }
 

@@ -4,7 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import javax.swing.*;
 
-public class MyRobot {
+public class MyRobot extends Window {
 
 
        /*    System.setProperty("webdriver.chrome.driver", "C:\\Users\\yz055\\OneDrive\\שולחן העבודה\\Selnium\\chromedriver.exe");
@@ -13,8 +13,8 @@ public class MyRobot {
        driver.get("https://web.whatsapp.com/");
 */
 
-    public static void Whatsapp() throws InterruptedException {
-
+    public static void OpenWhatsapp() throws InterruptedException {
+        int y;
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\yz055\\OneDrive\\שולחן העבודה\\Selnium\\chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
         driver.manage().window().fullscreen();
@@ -29,7 +29,6 @@ public class MyRobot {
         while (true) {
 
             if (driver.getPageSource().contains("תיבת טקסט להזנת החיפוש")) {
-                System.out.println("sos");
                 JFrame frame = new JFrame();
                 frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                 frame.setLocationRelativeTo(null);
@@ -37,18 +36,18 @@ public class MyRobot {
                 frame.setLayout(null);
                 frame.setResizable(false);
                 frame.setBounds(0, 0, 500, 500);
-                JLabel label = new JLabel("Ssssssiudhbewijdn");
-                label.setBounds(10, 10, 100, 100);
-                frame.add(label);
+                JLabel text = new JLabel("is conected");
+                text.setBounds(20, 20, 200, 200);
+                frame.add(text);
 
                 break;
             }
+
 
         }
 
 
     }
-
 }
 
 
