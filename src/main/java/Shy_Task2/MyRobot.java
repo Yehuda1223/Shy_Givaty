@@ -4,8 +4,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import javax.swing.*;
 
-public class MyRobot extends Window {
 
+public class MyRobot extends Window {
+    public boolean conect = false;
 
        /*    System.setProperty("webdriver.chrome.driver", "C:\\Users\\yz055\\OneDrive\\שולחן העבודה\\Selnium\\chromedriver.exe");
        ChromeDriver driver = new ChromeDriver();
@@ -14,7 +15,7 @@ public class MyRobot extends Window {
 */
 
     public static void OpenWhatsapp() throws InterruptedException {
-        int y;
+
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\yz055\\OneDrive\\שולחן העבודה\\Selnium\\chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
         driver.manage().window().fullscreen();
@@ -27,19 +28,20 @@ public class MyRobot extends Window {
 
 
         while (true) {
+            boolean conect = driver.getPageSource().contains("תיבת טקסט להזנת החיפוש");
+            if (conect) {
 
-            if (driver.getPageSource().contains("תיבת טקסט להזנת החיפוש")) {
+                System.out.println("is conect");
                 JFrame frame = new JFrame();
                 frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                 frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
                 frame.setLayout(null);
                 frame.setResizable(false);
-                frame.setBounds(0, 0, 500, 500);
-                JLabel text = new JLabel("is conected");
-                text.setBounds(20, 20, 200, 200);
+                frame.setBounds(0, 0, WINDOW_WITGH, WINDOW_HIGHT);
+                JLabel text = new JLabel("is Conect");
+                text.setBounds(0, 0, WINDOW_WITGH / 10, WINDOW_HIGHT / 10);
                 frame.add(text);
-
                 break;
             }
 
@@ -47,6 +49,10 @@ public class MyRobot extends Window {
         }
 
 
+    }
+
+    public static boolean IsConect() {
+        return true;
     }
 }
 
